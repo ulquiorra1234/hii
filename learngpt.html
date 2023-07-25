@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <button id="fetchDataBtn">Fetch Data</button>
+<div id="dataContainer"></div>
+
+<script>
+    const fetchData = () => {
+  const xhr = new XMLHttpRequest();
+  xhr.open('GET', 'https://reqres.in/api/users?page=1', true);
+
+  xhr.onload = () => {
+    if (xhr.status === 200) {
+      const responseData = JSON.parse(xhr.responseText);
+      document.getElementById('dataContainer').textContent = responseData.data;
+    } else {
+      console.log('Error:', xhr.status);
+    }
+  };
+
+  xhr.onerror = () => {
+    console.log('Request failed');
+  };
+
+  xhr.send();
+};
+
+document.getElementById('fetchDataBtn').addEventListener('click', fetchData);
+
+</script>
+</body>
+</html>

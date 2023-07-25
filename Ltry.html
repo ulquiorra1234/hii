@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Show/Hide P Tags</title>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <button id="button1">Button 1</button>
+    <button id="button2">Button 2</button>
+
+    <p data-status="0" class="data">Paragraph 1 (Status: 0)</p>
+    <p data-status="1" class="data">Paragraph 2 (Status: 1)</p>
+    <p data-status="0" class="data">Paragraph 3 (Status: 0)</p>
+    <p data-status="1" class="data">Paragraph 4 (Status: 1)</p>
+    <p data-status="1" class="data">Paragraph 5 (Status: 1)</p>
+
+    <script>
+        document.getElementById('button1').addEventListener('click', function () {
+            var paragraphs = document.getElementsByClassName('data');
+            for (var i = 0; i < paragraphs.length; i++) {
+                paragraphs[i].classList.remove('hidden');
+            }
+
+            paragraphs = document.querySelectorAll('p[data-status="1"]');
+            for (var i = 0; i < paragraphs.length; i++) {
+                paragraphs[i].classList.add('hidden');
+            }
+        });
+
+        document.getElementById('button2').addEventListener('click', function () {
+            var paragraphs = document.getElementsByClassName('hidden');
+            for (var i = 0; i < paragraphs.length; i++) {
+                paragraphs[i].classList.remove('hidden');
+            }
+
+            paragraphs = document.querySelectorAll('p[data-status="0"]');
+            for (var i = 0; i < paragraphs.length; i++) {
+                paragraphs[i].classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>

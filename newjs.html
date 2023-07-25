@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+    //   let i =3500
+    // setTimeout(()=>{
+    //   console.log(`hi after $}`)
+    // },2000)
+
+
+    // console.log("normal hii")
+
+    const a = new Promise((resolve,reject ) => {
+      setTimeout(() => {
+        resolve("done")
+      }, 3000)
+
+
+
+    })
+
+
+    const  ok =async ()=>{
+
+      let res = await a;
+
+      console.log(res + "111")
+
+    }
+
+    ok( )
+
+    // a.then((value) => {
+    //   console.log(value)
+    //   return new Promise((resolve)=>{
+    //     setTimeout(() => {
+    //     resolve("st2")
+    //     console.log("st2")
+    //   }, 3000)
+    //   })
+    // }).then((value) => {
+    //   return new Promise((resolve)=>{
+    //     setTimeout(() => {
+    //     resolve("st3")
+    //     console.log("st3")
+    //   }, 3000)
+    // })}).catch((err) => {
+    //   console.log("promise failed :", err)
+    // })
+
+
+  </script>
+
+
+
+</body>
+
+</html>

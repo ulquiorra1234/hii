@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        // function greet(name) {
+        //     console.log('Hello, ' + name + '!');
+        // }
+
+        // function sayHello(func) {
+        //     func('John');
+        // }
+
+        // sayHello(greet);
+
+
+        // declaring the three sides of the triangle 
+        let a = 3
+        let b = 4
+        let c = 5
+
+
+
+
+        const calculate = (a, b, c) => {
+
+            // checking whether the triangle is possible or not
+
+            if (a + b <= c || b + c <= a || c + a <= b) {
+
+                console.log("The triangle with the given dimensions is not possible")
+
+            }
+
+            else if (a + b > c || b + c > a || c + a > b) {
+                // checking the type of the triangle according to the dimensions
+
+
+                // for right-angled triangle
+                if (a ** 2 + b ** 2 == c ** 2 || b ** 2 + c ** 2 == a ** 2 || c ** 2 + a ** 2 == b ** 2) {
+                    console.log("it is a right-angled triangle")
+                }
+
+                // For scalene triangle
+                else if (a !== b && b !== c && c !== a) {
+                    console.log("it is a scalar triangle")
+                }
+
+                // for equilateral triangle
+                else if (a == b && c == a) {
+                    console.log("it is an equilateral triangle ")
+                }
+
+                //  For isoceles triangle
+                else if (a == b || b == c || c == a) {
+                    console.log("it is an Isoceles traingle")
+                }
+            }
+        }
+
+        calculate(1, 4, 5)
+
+            ;</script>
+
+
+
+</body>
+
+</html>

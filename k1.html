@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="k" style="height: 200px;width: 300px;background-color: blue;">
+
+    </div>
+
+
+
+    <script>
+
+        let div = document.createElement('div')
+
+        div.style.color="white"
+        div.style.backgroundColor="red"
+        div.style.height='200px'
+        div.style.width = "300px"
+        div.style.display="grid"
+        div.style.justifyContent="center"
+        div.style.alignItems="center"
+
+
+
+        let para = document.createElement('p')
+
+        para.style.fontSize="33px"
+        // para.style.color="white"
+        para.innerHTML="HI this is P"
+
+
+        document.body.appendChild(div)
+        div.appendChild(para)
+        
+        
+        let k1 = document.getElementById('k')
+        k1.appendChild(para)
+
+
+    </script>
+    
+</body>
+</html>

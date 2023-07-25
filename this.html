@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+            function fun(){
+               return `my name is ${this.name}  of class ${this.class} with id : ${this.id}`
+            }
+
+            let arr = [
+             person1 = {
+                name:"ok1",
+                class:12,
+                id:1,
+                about:fun
+            },
+             person2 = {
+                name:"ok2",
+                class:12,
+                id:2,
+                about:fun
+            },
+             person3 = {
+                name:"ok3",
+                class:12,
+                id:3,
+                about:fun,
+            },
+             person4 = {
+                name:"ok4",
+                class:12,
+                id:4,
+                about:fun
+            }
+            ]
+
+            // person1.about()
+            // person2.about()
+            // person3.about()
+            // person4.about()
+            
+            for(let i of arr){
+                console.log(i.about())
+            }
+
+                // const person1 = {
+                //     name:"ok1",
+                //     class:12,
+                //     id:1,
+                //     about:fun
+                // }
+                // const  person2 = {
+                //     name:"ok2",
+                //     class:12,
+                //     id:2,
+                //     about:fun
+                // }
+                // const person3 = {
+                //     name:"ok3",
+                //     class:12,
+                //     id:3,
+                //     about:fun,
+                // }
+                // const person4 = {
+                //     name:"ok4",
+                //     class:12,
+                //     id:4,
+                //     about:fun
+                // }
+
+
+
+    ;</script>
+</body>
+</html>

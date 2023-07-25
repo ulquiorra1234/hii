@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        var obj = {
+            first:"aysuhi",
+            func : function (){
+                var self  = this;
+                console.log("outerFunction : this.first = "+ this.first)
+                console.log("outerFunction : self.first = "+ self.first)
+
+                function a(){
+                    console.log("inner function : this.first = "+ this.first)
+                    console.log("inner function : self.first = "+ self.first)
+
+
+                    function b(){
+                        console.log("inner function : this.first = "+ this.first)
+                        console.log("inner function : self.first = "+ self.first)
+                    }
+                    b()
+
+                }
+                a()
+            }
+
+        }
+
+        obj.func()
+
+
+    </script>
+    
+</body>
+</html>

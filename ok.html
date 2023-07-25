@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <img src="" alt="" id="img">
+    <br>
+    <br>
+    <br>
+    <br>
+    <div id="ok">
+        
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+
+    <!-- <button id="bt" onclick="aak()">click </button> -->
+    <script>
+
+        let opm = document.getElementById("ok")
+        opm.innerHTML=`<span style="background-color: red;color: white;padding: 30px;" onclick="my()" > click me </span>`        
+        function my(){
+            opm.innerHTML=`<span style="background-color: red;color: white;padding: 30px;" onclick="my1()" > click me2 </span>`
+        }
+
+        function my1(){
+            opm.innerHTML=`<span style="background-color: red;color: white;padding: 30px;" onclick="my2()" id="ak" > click 3 </span>`
+        }
+
+        function my2(){
+            opm.remove();
+        }
+
+        // let but = document.getElementById("bt")
+        // let img= document.getElementById("img")
+        // const aak=()=>{
+        // }
+
+        // let re = 9
+
+        // if(re==9){
+        //     document.write("the number is 9")
+        // }
+        // else if(re==10){
+        //     img.src=` https://th.bing.com/th/id/OIP.JS2Son_YPBZ7JmqqwV3fQAHaE7?pid=ImgDet&rs=1`
+
+        // }
+        // else{
+        //     img.src=` https://th.bing.com/th/id/R.fbfc31a2e53ef9ade58ea65e6db325a8?rik=vvVg%2byuMhnIT4g&riu=http%3a%2f%2fimg.xcitefun.net%2fusers%2f2009%2f12%2f129417%2cxcitefun-6.jpg&ehk=K%2frZtsD8ahIa%2f6awvhFuVlI5nql4mViIxKRzb0mRSrs%3d&risl=&pid=ImgRaw&r=0`
+        // }
+
+
+        
+       let div = document.createElement("div");
+
+       div.style.height="200px"
+       div.style.width="400px"
+       div.style.backgroundColor="red"
+       div.style.display="grid"
+       div.style.alignItems="center"
+       div.style.justifyContent="center"
+
+
+       document.body.appendChild(div)
+
+       let para = document.createElement('p')
+       para.innerHTML="hiii"
+       para.style.color="white"
+       para.style.fontSize="45px"
+
+       div.appendChild(para)
+
+       div.onclick= function(){
+        para.innerHTML="Hii again"
+        div.setAttribute("id","ak")
+
+        let a =document.getElementById('ak')
+        a.onclick=function(){
+            para.innerHTML="Ok then"
+        div.setAttribute("id","pk")
+
+        let b =document.getElementById('pk')
+        b.onclick=function(){
+            para.innerHTML="Fir kabhi"
+        div.setAttribute("id","dk")
+        
+        let c=document.getElementById('dk')
+        c.onclick=function(){
+            c.remove()
+        }
+    }
+        }
+        }
+
+
+            // let a =document.getElementById('k')
+            // a.onclick=function(){
+            //     para.innerHTML="this is animation2"
+            // div.setAttribute("id","pk")
+            // }
+            
+
+            // a.addEventListener("add",()=> {
+            //     para.innerHTML="second click"
+            // })   
+    </script>
+</body>
+
+</html>
